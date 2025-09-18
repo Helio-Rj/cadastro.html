@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="card" role="main">
+        <h1>Criar conta</h1>
+        <p class="lead">Insira um nick, email e senha para criar sua conta.</p>
+
+        <form id="signup" novalidate>
+            <div>
+                <label for="nick">Nick</label>
+                <input id="nick" name="nick" type="text" autocomplete="nickname" placeholder="Seu nick" required
+                    aria-required="true" />
+                <div id="nickError" class="error" aria-live="polite"></div>
+            </div>
+
+            <div style="margin-top:12px">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="seu@exemplo.com" required
+                    aria-required="true" />
+                <div id="emailError" class="error" aria-live="polite"></div>
+            </div>
+
+            <div style="margin-top:12px">
+                <label for="password">Senha</label>
+                <div class="input-with-btn">
+                    <input id="password" name="password" type="password" autocomplete="new-password"
+                        placeholder="Mínimo 8 caracteres" required aria-required="true" />
+                    <button type="button" class="toggle-pass" id="togglePass" aria-pressed="false">mostrar</button>
+                </div>
+                <div id="passError" class="error" aria-live="polite"></div>
+            </div>
+
+            <div class="actions">
+                <button type="submit">Cadastrar</button>
+            </div>
+
+            <p class="tos">Ao clicar em "Cadastrar" você aceita nossos <a href="#" tabindex="0">termos de uso</a> e a <a
+                    href="#" tabindex="0">política de privacidade</a>.</p>
+
+            <p class="small">Já tem conta? <a href="#" tabindex="0">Entrar</a></p>
+        </form>
+
+        <div id="result"
+            style="display:none;margin-top:14px;padding:12px;border-radius:8px;background:#f8fafc;color:#0f172a"></div>
+    </main>
+ <script src="script.js"></script>
+</body>
+
+</html>
